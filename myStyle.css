@@ -1,0 +1,234 @@
+body {
+
+	}
+/*背景图样式*/
+#web_bg{
+	  position:fixed;
+	  top: 0;
+	  left: 0;
+	  width:100%;
+	  /*height:100%;*/
+	  z-index:-10;
+	  
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 12s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:normal;
+	-webkit-animation-fill-mode:backward;
+}
+@-webkit-keyframes fadeIn 
+{
+	0%{
+	opacity: 1;
+	-webkit-transform:scale(1,1);
+	}
+	25%{
+	opacity: 1;
+	-webkit-transform:scale(1,1);
+	}
+	50%{
+	opacity: 0;
+	-webkit-transform:scale(1,1);
+	}
+	75%{
+	opacity: 0;
+	-webkit-transform:scale(1.2,1.2);
+	}
+	100% {
+	opacity: 1; 
+	-webkit-transform:scale(1,1);
+	}
+}
+#web_bg_0{
+	  position:fixed;
+	  top: 0;
+	  left: 0;
+	  width:100%;
+	  /*height:100%;*/
+	  min-width: 1000px;
+	  z-index:-11;
+	  
+	-webkit-animation-name: scaleIn; /*动画名称*/
+	-webkit-animation-duration: 12s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:normal;
+	-webkit-animation-fill-mode:backward;
+}
+@-webkit-keyframes scaleIn 
+{
+	25%{
+	-webkit-transform:scale(1.2,1.2);
+	}
+	50%{
+	-webkit-transform:scale(1,1);
+	}
+}
+
+/*如何不铺满并居中??先留着吧*/
+.bg_solid{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	
+	background-color: rgba(0,0,0,0.3);
+	z-index:-9;
+}
+
+form {
+
+}
+input,button {
+	border:none;
+	outline:none;
+}
+input {
+	font-size:20px;
+	padding-left:25px;
+}
+/*搜索框样式*/
+.search_bar form {
+	height:60px;
+}
+.search_bar input {
+	width:250px;
+	height:60px;
+	border-radius:30px;
+	border:2px solid #000000;
+	background:#FFFFFF;
+	background-color: rgba(255,255,255,0.3);
+	transition:0.3s ease;
+	position:relative;
+	/*干脆就不要用center!让布局取决于div!*/
+}
+.search_bar input:hover {
+	width:280px;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 30px rgba(255,255,255,1);
+}
+.search_bar input:focus {
+	width:280px;
+}
+.search_bar button {
+	background: url(img/search.png);
+	top:3px;
+	height:60px;
+	width:60px;
+	cursor:pointer;
+	position:absolute;
+	background-color: rgba(255,255,255,0.3);
+	border-radius:30px;
+	border:2px solid #000000;
+}
+.search_bar button:focus {
+	background: url(img/search_down.png);
+	opacity:1.0;
+	border:0px solid #000000;
+	box-shadow: 0px 0px 0px #FFFFFF;
+}
+.search_bar button:hover {
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 30px rgba(255,255,255,1);
+}
+
+/*mudules单元按钮样式*/
+.modules button {
+	width:120px;
+	height:120px;
+	background-color: rgba(0,0,0,0.3);
+	border: none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius:30px;
+	border:2px solid #FFFFFF;
+	transition:0.3s ease;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:25px;
+}
+.modules button:focus {
+	
+}
+.modules button:hover {
+	background-color: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 30px rgba(255,255,255,1);
+	width:130px;
+	height:130px;
+}
+
+/*side_mudules单元按钮样式*/
+.side_mudules button {
+	width:120px;
+	height:60px;
+	background-color: rgba(255,255,255,0.6);
+	color: white;
+	cursor: pointer;
+	border-radius:10px;
+	border:2px solid #FFFFFF;
+	transition:0.3s ease;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:20px;
+}
+.side_mudules button:focus {
+	
+}
+.side_mudules button:hover {
+	background-color: rgba(0,0,0,0.6);
+	box-shadow: 0px 0px 30px rgba(255,255,255,1);
+}
+		
+/*画布样式*/
+canvas{
+	background-color:rgba(255,255,255,1);
+	border:2px solid #000000;
+	box-shadow: 0px 0px 50px rgba(0,0,0,1);
+}
+/*画布坐标符*/
+#c_info
+{
+	background-color:rgba(0,0,0,0.7);
+	font-size:12px;
+	color:#FFFFFF;
+}
+/*图片导入样式*/
+#imgInput
+{
+	background-color:rgba(255,255,255,0.3);
+	font-size:16px;
+	color:white;
+	box-shadow: 0px 0px 10px rgba(255,255,255,1);
+}
+
+/*edit单元按钮样式*/
+.edit button {
+	width:100px;
+	height:50px;
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+	cursor: pointer;
+	border:2px solid #000000;
+	transition:0.3s ease;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:20px;
+	display: block;
+	position:relative;
+	left:0px;
+}
+.edit button:focus {
+	
+}
+.edit button:hover {
+	left:10px;
+	background-color: rgba(0,0,0,0.6);
+}
+		
+		
+		
+		
+		
+		

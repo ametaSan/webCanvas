@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="galgame, ADV">
+		<meta name="description" content="Anime, Edit" >
+		<title>Colorization for Anime Sketch</title>
+		<link rel="stylesheet" type="text/css" href="myStyle.css" /> 
+		<script src="eel.js"></script>
+		<script src="web_bg.js"></script>
+		<script src="canvas.js"></script>
+		
+		
+	</head>
+	
+	<body onload="load()">
+		<!--为了实现叠加效果、用两个背景图当容器-->
+		<div class="wrapper"><img id="web_bg" src="img/bg_default.png"/></div>
+		<div class="wrapper"><img id="web_bg_0" src="img/bg_default.png"/></div>
+		<div ><div class="bg_solid"></div>
+		
+		<div class="side_mudules" style="text-align:center;position:relative;">
+			<button style="button" onclick="location.href='index.html'">HOME</button>
+			<a href="" download="" id="imgOutput" ></a>
+			<button type="button" style="button" onclick="convertCanvasToImage();">Export...</button>
+			
+		</div>
+		
+		<!--图片上传UI-->
+		<div style="text-align:center;position:relative;top:10px;">
+		<form>
+			<input type="file" id="imgInput" accept=".jpg,.png,.bmp" onchange="CheckFile(this);"/>
+		</form>
+		</div>
+		
+		<!--安放画布-->
+		<div style="text-align:center;align-items:center;position:relative;top:30px;" >
+			<canvas id="myCanvas" width="" height=""
+			onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()">
+			</canvas>
+		</div>
+		<div style="text-align:center;position:relative;top:20px"><label id="c_info"></label></div>
+		
+		
+		<!--edit区-->
+		<div class="edit" style="position:fixed;top:0px;left:0px;">
+			<button id="reset" type="button" style="button" onclick="resetAll()">Reset</button>
+			<button id="rotate" type="button" style="button" onclick="rotateImg()">Rotate</button>
+			<button id="scale" type="button" style="button" onclick="scaleImg()">Scale</button>
+			<button id="clip" type="button" style="button" onclick="clipImg()">Clip</button>
+			<button id="clipOff" type="button" style="button" onclick="clipImgOff()">Finish Clip</button>
+			<button id="match" type="button" style="button" onclick="matchCanvas()">Match Size</button>
+			<button id="blackOrWhite" type="button" style="button" onclick="blackOrWhite()">Decolorize</button>
+			<button id="convert" type="button" style="button" onclick="convertColor()">Reverse</button>
+			<button id="blackAndWhite" type="button" style="button" onclick="blackAndWhite()">Binarize</button>
+			<button id="fastBlur" type="button" style="button" onclick="fastBlur()">Fast Blur</button>
+			<button id="GaussianBlur" type="button" style="button" onclick="GaussianBlur()">Gaussian Blur</button>
+			<button id="gosike" type="button" style="button" onclick="gosike()">Mosaic</button>
+			<button id="L_sketchize" type="button" style="button" onclick="L_sketchize()">Laplace Sketchize</button>
+			<button id="ADT_sketchize" type="button" style="button" onclick="ADT_sketchize()">ADT Sketchize</button>
+		</div>
+
+
+	</body>
+	
+</html>
